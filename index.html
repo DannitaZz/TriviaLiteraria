@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+ 
+  <center>
+  <body>
+
+        <!-- pagina de bienvenida -->
+        <div id="pag-bienvenida" class='contenedor'>
+            <img id="logo" src="media/logo.PNG" width="300" height="200" >
+            <p>
+                ¿Qué tanto sabes de literatura?
+
+                ¡Escribe tu nombre y elige una obra para jugar!
+            ​</p><br>
+            <input type="text" id="nombre-usuario" value="Nombre"></br><br>
+          <div class="btngroup" role="group" aria-label="Basic outlined example"><br><br><br>
+            <button type="button" id="boton-principio" onclick="inicio_juego('principito')">El Principito</button>
+            <button type="button" id='boton-alicia' onclick="inicio_juego('alicia')">Alicia en el país de las maravillas</button>
+          </div>
+        </div>
+
+        <!-- pagina de preguntas principito -->
+        <div id="pag-preguntas-principito" class='contenedor'>
+           <br>
+           <strong><em>
+             "He aquí mi secreto. Es muy simple: no se ve bien sino con el corazón. Lo esencial es invisible a los ojos."
+        
+           </em></strong>
+           <br>
+            <h1 id="num-pregunta">
+                Pregunta 1
+            </h1>
+            <figure></figure>
+            <img id="prince" src="media/prince1.jpg" alt="imagen1" width="200" height="200">
+            </figure>
+            <p id="descripcion-pregunta">
+                ¿De qué flor habla el Principito?
+            </p>
+            <form>
+                <input type="radio" id="1-respuesta-1" name="pregunta-1-p" value="1" checked>
+                <label for="pregunta-1">A. Una amapola</label><br>
+                <input type="radio" id="1-respuesta-2" name="pregunta-1-p" value="2">
+                <label for="pregunta-2">Un rupex</label><br>
+                <input type="radio" id="1-respuesta-3" name="pregunta-1-p" value="3">
+                <label for="pregunta-3">Una rosa</label><br>
+                <input type="radio" id="1-respuesta-4" name="pregunta-1-p" value="4">
+                <label for="pregunta-4">Un girasol</label><br>
+            </form>
+            <h1 id="num-pregunta">
+                Pregunta 2
+            </h1>
+             <figure>
+            <img id="prince" src="media/prince2.jpg" alt="imagen1" width="200" height="200">
+            </figure>
+            <br>
+            <p id="descripcion-pregunta">
+                ¿Quienes acompañan al Principito?
+            </p>
+            <form>
+                <input type="radio" id="2-respuesta-1" name="pregunta-2-p" value="1" checked>
+                <label for="pregunta-1">A. Una zapatero y un zorro</label><br>
+                <input type="radio" id="2-respuesta-2" name="pregunta-2-p" value="2">
+                <label for="pregunta-2">Un piloto y una tortuga</label><br>
+                <input type="radio" id="2-respuesta-3" name="pregunta-2-p" value="3">
+                <label for="pregunta-3">Un artesano y una liebre</label><br>
+                <input type="radio" id="2-respuesta-4" name="pregunta-2-p" value="4">
+                <label for="pregunta-4">Un piloto y un zorro</label><br>
+            </form>
+            <br>
+            <h1 id="num-pregunta">
+                Pregunta 3
+            </h1>
+             <figure></figure>
+            <img id="prince" src="media/baobab.jpg" alt="imagen1" width="200" height="200">
+            </figure>
+            <p id="descripcion-pregunta">
+                ¿Qué tipo de árbol intenta remover el Principito en su asteroide?
+            </p>
+            <form>
+                <input type="radio" id="3-respuesta-1" name="pregunta-3-p" value="1" checked>
+                <label for="pregunta-1">Un arce</label><br>
+                <input type="radio" id="3-respuesta-2" name="pregunta-3-p" value="2">
+                <label for="pregunta-2">Un Baobab</label><br>
+                <input type="radio" id="3-respuesta-3" name="pregunta-3-p" value="3">
+                <label for="pregunta-3">Un sauce llorón</label><br>
+                <input type="radio" id="3-respuesta-4" name="pregunta-3-p" value="4">
+                <label for="pregunta-4">Un olivo</label><br>
+            </form>
+            <br>
+            <h1 id="num-pregunta">
+                Pregunta 4
+            </h1>
+             <figure>
+            <img id="prince" src="media/zorro.jpg" alt="imagen1" width="200" height="200">
+            </figure>
+            <p id="descripcion-pregunta">
+                ¿Cuál asteroide visitó primero el Principito?
+            </p>
+            <form>
+                <input type="radio" id="4-respuesta-1" name="pregunta-4-p" value="1" checked>
+                <label for="pregunta-1">El asteriode del rey</label><br>
+                <input type="radio" id="4-respuesta-2" name="pregunta-4-p" value="2">
+                <label for="pregunta-2">El asteriode del vanidoso</label><br>
+                <input type="radio" id="4-respuesta-3" name="pregunta-4-p" value="3">
+                <label for="pregunta-3">El asteriode del banquero</label><br>
+                <input type="radio" id="4-respuesta-4" name="pregunta-4-p" value="4">
+                <label for="pregunta-4">El asteroide del farolero</label><br>
+            </form>
+            <br><br>
+            <button type="button" id="siguiente-pregunta" onclick="final_juego('principito')" class="btnprimario">¡Terminé!</button>
+        </div><br>
+
+        <!-- pagina de preguntas alicia -->
+        <div id="pag-preguntas-alicia" class='contenedor'>
+          <br>
+            <strong><em>“¿Podrías decirme, por favor, qué camino debo seguir para salir de aquí?
+            -Esto depende en gran parte del sitio al que quieras llegar -dijo el Gato.
+            -No me importa mucho el sitio… -dijo Alicia.
+            -Entonces tampoco importa mucho el camino que tomes -dijo el Gato. -“</em></strong>
+            <br><br>
+            <h1 id="num-pregunta">
+               Pregunta 1
+            </h1>
+             <figure></figure>
+            <img id="alice" src="media/alice1.jpg" alt="imagen1" width="200" height="200">
+            </figure>
+            <p id="descripcion-pregunta">
+                ¿A qué animal seguía Alicia al principio?
+            </p>
+            <form>
+                <input type="radio" id="1-respuesta-1" name="pregunta-1-a" value="1" checked>
+                <label for="pregunta-1">A una comadreja</label><br>
+                <input type="radio" id="1-respuesta-2" name="pregunta-1-a" value="2">
+                <label for="pregunta-2">A un conejo</label><br>
+                <input type="radio" id="1-respuesta-3" name="pregunta-1-a" value="3">
+                <label for="pregunta-3">A un buho</label><br>
+                <input type="radio" id="1-respuesta-4" name="pregunta-1-a" value="4">
+                <label for="pregunta-4">A un gato</label><br>
+            </form>
+            <br>
+            <h1 id="num-pregunta">
+                Pregunta 2
+            </h1>
+             <figure></figure>
+            <img id="alice" src="media/alicee.jpg" alt="imagen1" width="200" height="200">
+            </figure>
+            <p id="descripcion-pregunta">
+                ¿La historia trancurre en qué pais?
+            </p>
+            <form>
+                <input type="radio" id="2-respuesta-1" name="pregunta-2-a" value="1" checked>
+                <label for="pregunta-1">Inglaterra</label><br>
+                <input type="radio" id="2-respuesta-2" name="pregunta-2-a" value="2">
+                <label for="pregunta-2">Hungria</label><br>
+                <input type="radio" id="2-respuesta-3" name="pregunta-2-a" value="3">
+                <label for="pregunta-3">Austria</label><br>
+                <input type="radio" id="2-respuesta-4" name="pregunta-2-a" value="4">
+                <label for="pregunta-4">Estados Unidos</label><br>
+            </form>
+            <br>
+            <h1 id="num-pregunta">
+                Pregunta 3
+            </h1>
+             <figure>
+            <img id="alice" src="media/alice3.jpg" alt="imagen1" width="200" height="200">
+            </figure>
+            <p id="descripcion-pregunta">
+               El sombrerero y la liebre están...
+            </p>
+            <form>
+                <input type="radio" id="3-respuesta-1" name="pregunta-3-a" value="1" checked>
+                <label for="pregunta-1">ebrios</label><br>
+                <input type="radio" id="3-respuesta-2" name="pregunta-3-a" value="2">
+                <label for="pregunta-2">sobrios</label><br>
+                <input type="radio" id="3-respuesta-3" name="pregunta-3-a" value="3">
+                <label for="pregunta-3">tomando el té</label><br>
+                <input type="radio" id="3-respuesta-4" name="pregunta-3-a" value="4">
+                <label for="pregunta-4">locos</label><br>
+            </form>
+            <br>
+            <h1 id="num-pregunta">
+                Pregunta 4
+            </h1>
+             <figure>
+            <img id="alice" src="media/alice4.jpg" alt="imagen1" width="200" height="200">
+            </figure>
+            <p id="descripcion-pregunta">
+                ¿Cómo se llama el autor de la novela y en qué año la escribió?
+            </p>
+            <form>
+                <input type="radio" id="4-respuesta-1" name="pregunta-4-a" value="1" checked>
+                <label for="pregunta-1">Gabriel García Marquez en 1913</label><br>
+                <input type="radio" id="4-respuesta-2" name="pregunta-4-a" value="2">
+                <label for="pregunta-2">J. Kenner en 2013</label><br>
+                <input type="radio" id="4-respuesta-3" name="pregunta-4-a" value="3">
+                <label for="pregunta-3">Lewis Carroll en 1865</label><br>
+                <input type="radio" id="4-respuesta-4" name="pregunta-4-a" value="4">
+                <label for="pregunta-4">Albert Camus en 1898</label><br>
+            </form>
+            <br>
+            
+            <br><button class= "btnprimario" type="button" id="siguiente-pregunta" onclick="final_juego('alicia')">Ver tus resultados</button><br>
+        </div>
+
+        <!-- pagina de resultados -->
+        <div id="pag-resultados" class='contenedor'>
+            <h2><em>
+                ¡Este es tu resultado! 
+              
+            </em></h2>
+            <p id="texto-resultados">
+                Acertaste x preguntas
+            </p>
+            <h2><em>
+                ¿No era el que esperabas?
+                ¡intentalo de nuevo!
+              
+            </em></h2>
+            <button class="btnprimario" type="button" id="volver-jugar" onclick="inicio_programa()">Volver a jugar</button>
+        </div>
+
+        
+    
+    <script src="script.js"></script>
+  </body>
+  
+  </center>
+</html>
