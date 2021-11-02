@@ -1,0 +1,92 @@
+body {
+   
+    background-image: url(https://wallpaperaccess.com/full/2641048.gif)
+ 
+}
+
+.contenedor{
+  font-family: Arial, Helvetica, Sans-serif ;
+  width: 50%;
+  
+
+/* animaciones */
+  transition: 0.3s;
+
+/* apariencia */
+  border-radius: 12px;
+  border: 4px solid;
+  border-color: #f2e2c1;
+  padding: 16px 16px;
+  background-color: rgb(219, 182, 237);
+  text-align: center;  
+} 
+.contenedor:hover {
+    /* box-shadow: 0 0 15px 3px #ffdc82; */
+    box-shadow: 0 0 10px 1px white;
+  }
+
+input[type="text"]{
+    border-radius: 10px;
+    outline: none;
+    padding: 0.5em 0.5em 0.5em;
+    border: 0px solid white;
+    box-shadow: 0 0 0 2pt #f2e2c1;
+}
+
+#num-pregunta{
+  color: rgb(128, 44, 161)
+}
+#pag-bienvenida{
+   margin: 15% auto auto auto;
+}
+#pag-resultados{
+  margin: 15% auto auto auto; 
+}
+ 
+
+
+button{
+  /* Tomado de https://fdossena.com/?p=html5cool/buttons/i.frag con ligeras modificaciones */ 
+    display:inline-block;
+    padding:0.3em 1.2em;
+    margin:0 0.1em 0.1em 0;
+    border:0.16em solid rgba(255,255,255,0);
+    border-radius: 10px;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-weight:300;
+    color: white;
+    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+    text-align:center;
+    transition: all 0.2s;
+    background-color: rgb(121, 83, 136);
+    }
+
+button:hover{
+    box-shadow: 0 0 0 2pt #f2e2c1;
+    /* box-shadow: 0 0 0 2pt #FFD101; */
+    color: #f2e2c1;
+    } 
+
+#logo{
+  border: 4px rgb(121, 83, 136);
+  border-radius: 12px;
+}
+#prince {
+  border: 2px solid ;
+  border-radius: 12px; 
+
+}
+#alice {
+  border: 2px rgb(121, 83, 136);
+  border-radius: 12px;
+}
+.card{
+    background-color: #F9D0F2;
+}
+
+
+
+@media (min-width: 700px) {
+ 
+}
